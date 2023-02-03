@@ -14,12 +14,10 @@ const App = () => {
     data.append('product[description]', product.description)
     data.append('product[product_picture]', e.target.product_picture.files[0])
     
-    // useEffect(() => {
       fetch('http://localhost:3000/api/v1/products', {
         method: 'POST',
         body: data,
         headers: {
-          // 'Content-Type':'multipart/form-data',
           'Authorization': "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzc2OTA0MzR9.yr0Lg6QLlMBkhjHIstlUcYK9yh99wjhs4hZVwO5aonk"
         },
     })
@@ -28,7 +26,6 @@ const App = () => {
       setProduct({name: '', price: 0, category_id: 1, description: ''})
     }).
     catch((err) => console.log(err))
-  // })
 }
 
   return (
