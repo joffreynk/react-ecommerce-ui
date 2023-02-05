@@ -9,7 +9,7 @@ const Main = props => {
 
   return (
   <main className='mt-20'>
-    {/* move carousel collections in its own component */}
+    {/* Carousel collections */}
     <Collections />
   </main>
   )
