@@ -4,9 +4,9 @@
 
   const Header = props => {
   return (
-    <header className="fixed top-0 left-0 right-0 h-20 flex ">
-      <div className="text-8xl">Logo</div>
-      <ul>
+    <div className="fixed top-0 left-0 right-0 h-20 flex justify-between items-center px-10 bg-black text-white">
+      <div className="text-3xl">Logo</div>
+      <ul className='flex justify-center items-center gap-4'>
         <li>Home</li>
         <li>Collection</li>
         <li>Men</li>
@@ -15,12 +15,12 @@
         <li>Pages</li>
         <li>Contacts</li>
       </ul>
-      <div>
+      <div className='flex justify-center items-center gap-3'>
         <BsSearch />
         <BsSuitHeart />
         <BsCart4 />
       </div>
-    </header>
+    </div>
   )
   }
 
