@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Collections from './Collections'
+import Collections from './main/Collections'
 
 
 

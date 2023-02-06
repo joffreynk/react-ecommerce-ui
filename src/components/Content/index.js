@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Header from './Header'
+import Main from './Main'
 
 const Index = props => {
   return (
-    <div>Index</div>
+    <div>
+      <Header />
+      <Main />
+    </div>
   )
 }
 

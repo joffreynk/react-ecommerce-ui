@@ -1,13 +1,11 @@
 import React from 'react'
-import Header from './Content/Header'
-import Main from './Content/Main'
+import Root from './content/index'
 // import './index.css'
 
 const App = () => {
   return (
     <div className=' text-gray-600'>
-    <Header />
-    <Main />
+      <Root />
     </div>
   )
 }

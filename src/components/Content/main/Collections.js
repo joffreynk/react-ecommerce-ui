@@ -1,6 +1,6 @@
 import React, {useState}  from 'react'
 import PropTypes from 'prop-types'
-import {collections} from '../services/index'
+import {collections} from '../../services/index'
 
 const Collections = props => {
   const [position, setPosition] = useState(0)
