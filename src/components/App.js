@@ -1,6 +1,5 @@
 import React from 'react'
-import Root from './content/index'
-// import './index.css'
+import Root from './Content/index'
 
 const App = () => {
   return (

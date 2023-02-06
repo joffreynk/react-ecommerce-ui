@@ -22,9 +22,12 @@ const Collections = props => {
   return (
     <section id="collections" className="relative">
       <img className="w-full h-64" src={collections[position].pic} alt="Collections"/>
-      <div className='absolute top-[50%] right-0 left-0 flex justify-between items-end text-black text-xlg px-5'>
+      <div className='absolute top-[40%] right-0 left-0 flex justify-between items-end text-black text-xlg px-5'>
         <button className=" -rotate-90 uppercase  text-3xl" onClick={Prev} >Prev</button>
-        <p>{collections[position].message}</p>
+        <div className='flex flex-col gap-4'>
+          <h4 className='text-4xl uppercase text-pink-600 font-extrabold'>{collections[position].title}</h4>
+          <p className='text-lg'>{collections[position].message}</p>
+        </div>
         <button className="-rotate-90 uppercase text-3xl" onClick={next} >Next</button>
       </div>
     </section>
