@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Collections from './main/Collections'
 import CustomerCarer from './main/CustomerCarer'
+import Clothes from './main/Clothes'
 
 
 
@@ -16,6 +17,8 @@ const Main = props => {
     {/* Customer carer */}
     <CustomerCarer />
     
+    {/* clothes component */}
+    <Clothes />
   </main>
   )
 }
