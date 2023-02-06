@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cloth = () => {
   return (
-    <div>Cloth</div>
+    <div>Number(Math.random().toFixed(3))</div>
   )
 }
 
