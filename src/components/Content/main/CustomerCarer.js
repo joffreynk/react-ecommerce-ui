@@ -11,7 +11,7 @@ const CustomerCarer = props => {
     {icon: IoArrowUndoOutline, title: 'easy return', message: 'We provide easy return policy'},
   ]
   const care = cares.map(care=>{
-    return <div className='border px-7 py-4 flex justify-center items-center gap-5 rounded-lg'>
+    return <div className='border px-5 py-3 flex justify-center items-center gap-3 rounded-lg' key={care.title}>
       <care.icon className='text-6xl h-10 '/>
       <div>
         <h4 className='uppercase text-xl font-semibold'>{care.title}</h4>
@@ -21,7 +21,7 @@ const CustomerCarer = props => {
   })
 
   return (
-    <section className='flex gap-5 justify-evenly mx-auto pt-10'>
+    <section className='flex gap-5 justify-evenly mx-auto p-10'>
       {care}
     </section>
   )
