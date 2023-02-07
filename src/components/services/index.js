@@ -15,21 +15,21 @@ export const collections = [
   {pic: poster, message:'Selling product accross all countries', title:'Women collections'}
 ]
 
-export const clothes = [
-  {id:1, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:2, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
+export const products = [
+  {id:1, pic: women1, price: 12.58, description: 'Very beauty white shirt' },
+  {id:2, pic: women2, price: 12.58, description: 'Very beauty white shirt' },
   {id:3, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:4, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:5, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:6, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:7, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:8, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:9, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:10, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:11, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:12, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
+  {id:4, pic: women4, price: 12.58, description: 'Very beauty white shirt' },
+  {id:5, pic: accessory1, price: 12.58, description: 'Very beauty white shirt' },
+  {id:6, pic: accessory2, price: 12.58, description: 'Very beauty white shirt' },
+  {id:7, pic: accessory3, price: 12.58, description: 'Very beauty white shirt' },
+  {id:8, pic: accessory4, price: 12.58, description: 'Very beauty white shirt' },
+  {id:9, pic: poster, price: 12.58, description: 'Very beauty white shirt' },
+  {id:10, pic: women2, price: 12.58, description: 'Very beauty white shirt' },
+  {id:11, pic: accessory1, price: 12.58, description: 'Very beauty white shirt' },
+  {id:12, pic: poster, price: 12.58, description: 'Very beauty white shirt' },
   {id:13, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:14, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
-  {id:15, pic: women3, price: 12.58, description: 'Very beauty white shirt' },
+  {id:15, pic: women4, price: 12.58, description: 'Very beauty white shirt' },
+  {id:14, pic: accessory4, price: 12.58, description: 'Very beauty white shirt' },
 
 ]

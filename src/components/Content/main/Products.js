@@ -1,7 +1,9 @@
 import React from 'react'
-import Cloth from './Cloth'
+import Product from './Product'
 
-const Clothes = () => {
+import {products} from '../../services/index'
+
+const Products = () => {
   return (
     <div className='mx-10'>
       <div className='flex gap-4 mx-[5%] justify-end'>
@@ -15,14 +17,10 @@ const Clothes = () => {
           <li className='hover:cursor-pointer'>Accessories</li>
         </ul>
       </div>
-      <Cloth />
-      <Cloth />
-      <Cloth />
-      <Cloth />
-      <Cloth />
-      <Cloth />
+      {products.map((product) =><Product key={product.id} product={product}/>)}
+      <Product />
     </div>
   )
 }
 
-export default Clothes
+export default Products

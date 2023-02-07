@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Cloth = () => {
+const Product = ({product}) => {
   return (
+    
     <div>Number(Math.random().toFixed(3))</div>
   )
 }
 
-export default Cloth
+export default Product
