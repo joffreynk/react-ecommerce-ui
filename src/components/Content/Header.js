@@ -4,7 +4,7 @@
 
   const Header = props => {
   return (
-    <div className="fixed top-0 left-0 right-0 h-20 flex justify-between items-center px-10">
+    <div className="fixed top-0 left-0 right-0 h-20 flex justify-between items-center px-10 bg-white">
       <div className="text-3xl">Logo</div>
       <ul className='flex justify-center items-center gap-4'>
         <li className='hover:underline decoration-orange-500'>Home</li>
