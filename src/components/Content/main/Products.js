@@ -17,7 +17,9 @@ const Products = () => {
           <li className='hover:cursor-pointer'>Accessories</li>
         </ul>
       </div>
-      {products.map((product) => <Product key={product.id} product={product}/>)}
+      <di className="grid grid-cols-3 gap-x-3 items-stretch w-full">
+       {products.map((product) => <Product key={product.id} product={product}/>)}
+      </di>
     </div>
   )
 }
