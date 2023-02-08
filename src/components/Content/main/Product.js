@@ -6,7 +6,7 @@ const Product = ({product}) => {
   const numberRating = [1, 2, 3, 4, 5]
   return (
 
-    <div>
+    <div className='group-[mygroup]:hidden'>
       <img src={product.pic} alt = '' className=''/>
       <p>{product.description}</p>
       <p className='flex'>
@@ -16,7 +16,7 @@ const Product = ({product}) => {
         <p>${product.price}</p>
         <del>${product.price+Number(10*Math.random().toFixed(3))}</del>
       </div>
-      <div className='flex'>
+      <div className='hidden group-[mygroup]:hover:flex '>
         <BsCart4 />
         <BsSuitHeart />
         <MdOutlineCropRotate />
