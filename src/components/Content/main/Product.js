@@ -14,7 +14,7 @@ const Product = ({product}) => {
       </p>
       <div className='flex gap-10'>
         <p>${product.price}</p>
-        <del>${product.price+Number(10*Math.random().toFixed(3))}</del>
+        <del>${(product.price+Number(10*Math.random())).toString().slice(0, 4)}</del>
       </div>
       <div className='hidden group-[mygroup]:hover:flex '>
         <BsCart4 />
