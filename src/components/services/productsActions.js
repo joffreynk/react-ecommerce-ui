@@ -1,6 +1,6 @@
-export const GETPRODUCTS = 'GETPRODUCTS';
-export const CREATEPRODUCT = 'CREATEPRODUCT';
-export const GETPRODUCT = 'GETPRODUCT';
-export const UPDATEPRODUCT = 'UPDATEPRODUCT';
-export const DELETEPRODUCT = 'DELETEPRODUCT';
+export const GETALL = 'GETALL';
+export const CREATE = 'CREATE';
+export const GETONE = 'GETONE';
+export const UPDATE = 'UPDATE';
+export const DELETE = 'DELETE';
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { GETPRODUCTS } from '../../services/productsActions'
+import { GETPRODUCTS } from '../../services/products/productsActions'
 
 const ReadProducts = ({setFetchHelper}) => {
   return (

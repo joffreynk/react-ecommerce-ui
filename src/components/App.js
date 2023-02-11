@@ -5,8 +5,8 @@ import Root from './Content/index'
 import CreateProduct from './Dashboard/createProduct'
 import ReadProducts from './Dashboard/products/ReadProducts'
 import Update from './Dashboard/products/update'
-import productsReducer from './services/productsReducer'
-import { GETPRODUCTS } from './services/productsActions'
+import productsReducer from './services/products/productsReducer'
+import { GETPRODUCTS } from './services/products/productsActions'
 import {userInitialState, adminInitialState} from './services/initialState'
 
 
@@ -24,7 +24,7 @@ const App = () => {
     })
     .catch(error => console.log(error))
   }, [fetchHelper])
-  
+
   console.log(state);
   return (
 
