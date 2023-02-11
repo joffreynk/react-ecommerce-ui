@@ -10,7 +10,7 @@ export const productsReducer = (state, action) => {
       return  state = {...state, listOfProducts: [...listOfProducts, action.payload] }
       break;
     case GETONE:
-      return {...state, currentProduct: action.payload}
+      return {...state, newProduct: action.payload}
       break
     case DELETE:
       return {...state, message: action.payload}
@@ -21,6 +21,6 @@ export const productsReducer = (state, action) => {
 
 export const initialproductState = {
   listOfProducts: [],
-  currentProduct: [],
+  newProduct: [],
   message: '',
 }
