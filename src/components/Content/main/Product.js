@@ -10,7 +10,7 @@ const Product = ({product}) => {
       <img src={product.pic} alt = '' className='w-full h-[70%]  md:h-[82%]'/>
       <p>{product.description}</p>
       <p className='flex'>
-        {numberRating.map(number=><BsStar className='cursor-pointer' />)}
+        {numberRating.map(number=><BsStar key={number} className='cursor-pointer' />)}
       </p>
       <div className='flex gap-10'>
         <p>${product.price}</p>
