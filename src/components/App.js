@@ -9,7 +9,6 @@ import productsReducer from './services/products/productsReducer'
 import { GETPRODUCTS } from './services/products/productsActions'
 import {userInitialState, adminInitialState} from './services/initialState'
 
-
 const App = () => {
   const [fetchHelper, setFetchHelper] = useState({url: 'products', type: GETPRODUCTS, headers:{}})
   const initialState = userInitialState.token.isAdmin ? adminInitialState : userInitialState

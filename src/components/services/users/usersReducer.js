@@ -1,7 +1,7 @@
 
-import { GETALL, CREATE, GETONE, UPDATE, DELETE } from "../productsActions"
+import { GETALL, CREATE, GETONE, UPDATE, DELETE } from "../actions"
 
-export const productsReducer = (state, action) => {
+export const usersReducer = (state, action) => {
   switch(action.type){
     case GETALL:
       return state = {...state, listOfusers: action.payload}
@@ -19,7 +19,7 @@ export const productsReducer = (state, action) => {
   }
 }
 
-export const initialproductState = {
+export const initialUserState = {
   listOfusers: [],
   newUser: [],
   message: '',

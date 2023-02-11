@@ -1,5 +1,5 @@
 
-import { GETALL, CREATE, GETONE, UPDATE, DELETE } from "../productsActions"
+import { GETALL, CREATE, GETONE, UPDATE, DELETE } from "../actions"
 
 export const productsReducer = (state, action) => {
   switch(action.type){
