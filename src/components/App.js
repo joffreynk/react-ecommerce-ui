@@ -1,4 +1,4 @@
-import React, {useReducer, createContext, useEffect} from 'react'
+import React, {useReducer, createContext,useState, useEffect} from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import Root from './Content/index'
@@ -7,41 +7,32 @@ import ReadProducts from './Dashboard/products/ReadProducts'
 import Update from './Dashboard/products/update'
 import productsReducer from './services/productsReducer'
 import { GETPRODUCTS } from './services/productsActions'
+import {userInitialState, adminInitialState} from './services/initialState'
 
-const initialState = {
-  products: [],
-  orders: [],
-  reviews: [],
-  token: {}
-}
-
-const adminInitialState = {
-  ...initialState,
-  users: []
-}
-
-const URL = 'http://localhost:3000/api/v1/products';
 
 const App = () => {
+  const [fetchHelper, setFetchHelper] = useState({url: 'products', type: GETPRODUCTS, headers:{}})
+  const initialState = userInitialState.token.isAdmin ? adminInitialState : userInitialState
   const [state, dispatch] = useReducer(productsReducer, initialState)
   
   useEffect(() => {
-    fetch(URL)
+    const URL = 'http://localhost:3000/api/v1/'+fetchHelper.url;
+    fetch(URL, fetchHelper.headers ? fetchHelper.headers : null)
     .then((response) => response.json())
     .then((data) => {
-      dispatch({type: GETPRODUCTS, payload: data})
+      dispatch({type: fetchHelper.type, payload: data})
     })
     .catch(error => console.log(error))
-  }, [])
+  }, [fetchHelper])
   
   console.log(state);
   return (
 
     <Routes className=' text-gray-600'>
       <Route path='/' element={<Root />} />
-      <Route path='/dashboard' element={<CreateProduct />} />
+      <Route path='/dashboard' element={<CreateProduct  />} />
       <Route path='/dashboard/:id' element={<Update />} />
-      <Route path='/dashboard/read' element={<ReadProducts />} />
+      <Route path='/dashboard/read' element={<ReadProducts setFetchHelper={setFetchHelper} />} />
     </Routes>
   )
 }

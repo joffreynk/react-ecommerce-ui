@@ -1,18 +1,6 @@
 
 import { GETPRODUCTS, CREATEPRODUCT, GETPRODUCT, UPDATEPRODUCT, DELETEPRODUCT } from "./productsActions"
 
-const state = {
-  products: [],
-  orders: [],
-  reviews: [],
-  token: {}
-}
-
-const adminInitialState = {
-  ...state,
-  users: []
-}
-
 const productsReducer = (state, action) => {
   switch(action.type){
     case GETPRODUCTS:
