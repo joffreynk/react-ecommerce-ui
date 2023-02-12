@@ -4,14 +4,6 @@ export const productsReducer = (state, action) => {
         return state = {...state, listOfusers: action.payload}
         break;
       case CREATE || UPDATE:
-        return  state = {...state, listOfusers: [...listOfusers, action.payload] }
-        break;
-      case GETONE:
-        return {...state, newUser: action.payload}
-        break
-      case DELETE:
-        return {...state, message: action.payload}
-        break;
       default: return state
     }
   }

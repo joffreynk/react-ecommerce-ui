@@ -1,12 +1,12 @@
 
-import { GETALL, CREATE, GETONE, UPDATE, DELETE } from "../actions"
+import { GETALL, GETONE, UPDATE, DELETE } from "../actions"
 
 export const usersReducer = (state, action) => {
   switch(action.type){
     case GETALL:
       return state = {...state, listOfusers: action.payload}
       break;
-    case CREATE || UPDATE:
+    case UPDATE:
       return  state = {...state, listOfusers: [...listOfusers, action.payload] }
       break;
     case GETONE:
