@@ -1,10 +1,10 @@
 import React from 'react'
-import { GETPRODUCTS } from '../../services/products/productsActions'
+import { GETALL } from '../../services/actions'
 
 const ReadProducts = ({setFetchHelper}) => {
   return (
     <div>ReadProducts
-      <button onClick={()=>setFetchHelper({url: 'products', type: GETPRODUCTS, headers:{}})}>new fetch</button>
+      <button onClick={()=>setFetchHelper({url: 'productts', type: GETALL, dataUpdate:'products', headers:{}})}>new fetch</button>
     </div>
   )
 }

@@ -6,7 +6,9 @@ export const userInitialState = {
   products: [],
   orders: [],
   reviews: [],
-  token: mytoken? mytoken : {isAdmin: true}
+  singleValue: {},
+  token: mytoken? mytoken : {isAdmin: true},
+  message: []
 }
   
 export  const adminInitialState = {

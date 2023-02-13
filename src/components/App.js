@@ -5,23 +5,26 @@ import Root from './Content/index'
 import CreateProduct from './Dashboard/createProduct'
 import ReadProducts from './Dashboard/products/ReadProducts'
 import Update from './Dashboard/products/update'
-import productsReducer from './services/products/productsReducer'
-import { GETPRODUCTS } from './services/products/productsActions'
+import reducer from './services/reducer'
+import { GETALL, DELETE } from './services/actions'
 import {userInitialState, adminInitialState} from './services/initialState'
 
 const App = () => {
-  const [fetchHelper, setFetchHelper] = useState({url: 'products', type: GETPRODUCTS, headers:{}})
+  const [fetchHelper, setFetchHelper] = useState({url: 'products', dataUpdate:'products', type: GETALL, headers:{}})
   const initialState = userInitialState.token.isAdmin ? adminInitialState : userInitialState
-  const [state, dispatch] = useReducer(productsReducer, initialState)
+  const [state, dispatch] = useReducer(reducer, initialState)
   
   useEffect(() => {
-    const URL = 'http://localhost:3000/api/v1/'+fetchHelper.url;
+    const URL = 'https://dummyjson.com/'+fetchHelper.url;
     fetch(URL, fetchHelper.headers ? fetchHelper.headers : null)
     .then((response) => response.json())
     .then((data) => {
-      dispatch({type: fetchHelper.type, payload: data})
+      dispatch({type: fetchHelper.type, payload: data.products, dataUpdate: fetchHelper.dataUpdate})
     })
-    .catch(error => console.log(error))
+    .catch(error => {
+      console.log(error)
+      dispatch({type: DELETE, payload: error, dataUpdate: fetchHelper.message})
+    })
   }, [fetchHelper])
 
   console.log(state);

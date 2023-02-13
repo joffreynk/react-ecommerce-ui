@@ -1,1 +1,0 @@
-const GET = 'GET'

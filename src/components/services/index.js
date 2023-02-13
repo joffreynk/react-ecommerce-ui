@@ -2,11 +2,7 @@ import women1 from '../../images/women1.jpeg';
 import women2 from '../../images/women2.jpeg';
 import women4 from '../../images/women4.jpeg';
 import women3 from '../../images/women3.jpeg';
-
 import poster from '../../images/poster.jpg';
-
-
-
 
 import accessory1 from '../../images/accessory1.jpg';
 import accessory2 from '../../images/accessory2.jpg';
