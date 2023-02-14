@@ -1,5 +1,6 @@
 
 import { GETALL, CREATE, GETONE, UPDATE, DELETE, LOGIN, LOGOUT } from "./actions"
+import { ECOMERCE_AUTH_TOKEN } from "./initialState"
 
 export const reducer = (state, {type, dataUpdate, payload}) => {
   switch(type){
@@ -12,7 +13,7 @@ export const reducer = (state, {type, dataUpdate, payload}) => {
       state[dataUpdate] = [...state[dataUpdate], payload]
       return  state
     case LOGIN:
-      
+      localStorage.setItem(ECOMERCE_AUTH_TOKEN, payload)
       state[dataUpdate] = payload
       return  state;
     case GETONE:
