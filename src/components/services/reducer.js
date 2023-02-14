@@ -11,8 +11,10 @@ export const reducer = (state, {type, dataUpdate, payload}) => {
       state.message = []
       state[dataUpdate] = [...state[dataUpdate], payload]
       return  state
-    case GETONE:
-      state.message = []
+    case LOGIN:
+      
+      state[dataUpdate] = payload
+      return  state;
     case GETONE:
       state.message = []
       return {...state, singleValue: payload}
