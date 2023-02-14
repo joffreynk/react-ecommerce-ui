@@ -1,5 +1,5 @@
 
-import { GETALL, CREATE, GETONE, UPDATE, DELETE } from "./actions"
+import { GETALL, CREATE, GETONE, UPDATE, DELETE, LOGIN, LOGOUT } from "./actions"
 
 export const reducer = (state, {type, dataUpdate, payload}) => {
   switch(type){
@@ -11,6 +11,8 @@ export const reducer = (state, {type, dataUpdate, payload}) => {
       state.message = []
       state[dataUpdate] = [...state[dataUpdate], payload]
       return  state
+    case GETONE:
+      state.message = []
     case GETONE:
       state.message = []
       return {...state, singleValue: payload}
