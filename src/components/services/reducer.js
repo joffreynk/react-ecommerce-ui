@@ -16,6 +16,10 @@ export const reducer = (state, {type, dataUpdate, payload}) => {
       localStorage.setItem(ECOMERCE_AUTH_TOKEN, payload)
       state[dataUpdate] = payload
       return  state;
+    case LOGOUT:
+      localStorage.removeItem(ECOMERCE_AUTH_TOKEN)
+      state[dataUpdate] = {}
+      return  state;
     case GETONE:
       state.message = []
       return {...state, singleValue: payload}
