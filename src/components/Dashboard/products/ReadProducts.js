@@ -4,6 +4,8 @@ import {RiDeleteBin6Line} from 'react-icons/ri'
 import { GETALL } from '../../services/actions'
 
 const ReadProducts = ({setFetchHelper}) => {
+  const products = [1, 2, 3, 4, 5, 4, 2, 7]
+
   return (
     <div>
       <table class="table-fixed">
@@ -20,7 +22,9 @@ const ReadProducts = ({setFetchHelper}) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+
+          {products.map((product, i)=>{
+            return (<tr key={i}>
           <td>ID</td>
           <td>Category ID</td>
           <td>Name</td>
@@ -29,7 +33,9 @@ const ReadProducts = ({setFetchHelper}) => {
           <td>Product picture</td>
           <td><FaEdit /></td>
           <td><RiDeleteBin6Line /></td>
-          </tr>
+          </tr>)
+          })}
+          
         </tbody>
       </table>
       <button onClick={()=>setFetchHelper({url: 'productts', type: GETALL, dataUpdate:'products', headers:{}})}>new fetch</button>
