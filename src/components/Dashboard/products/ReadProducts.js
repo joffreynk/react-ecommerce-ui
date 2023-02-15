@@ -1,4 +1,6 @@
 import React from 'react'
+import {FaEdit} from 'react-icons/fa'
+import {RiDeleteBin6Line} from 'react-icons/ri'
 import { GETALL } from '../../services/actions'
 
 const ReadProducts = ({setFetchHelper}) => {
@@ -19,9 +21,14 @@ const ReadProducts = ({setFetchHelper}) => {
         </thead>
         <tbody>
           <tr>
-            <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
+          <td>ID</td>
+          <td>Category ID</td>
+          <td>Name</td>
+          <td>Price</td>
+          <td>Description</td>
+          <td>Product picture</td>
+          <td><FaEdit /></td>
+          <td><RiDeleteBin6Line /></td>
           </tr>
         </tbody>
       </table>
