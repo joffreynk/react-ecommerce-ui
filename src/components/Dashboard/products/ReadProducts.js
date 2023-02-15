@@ -6,10 +6,15 @@ const ReadProducts = ({setFetchHelper}) => {
     <div>
       <table class="table-fixed">
         <thead>
-          <tr>
-            <th>Song</th>
-            <th>Artist</th>
-            <th>Year</th>
+          <tr className='capitalize'>
+            <th>ID</th>
+            <th>Category ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Product picture</th>
+            <th>Edit</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
