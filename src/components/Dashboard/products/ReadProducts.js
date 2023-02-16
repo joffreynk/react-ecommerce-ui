@@ -8,17 +8,17 @@ const ReadProducts = ({setFetchHelper}) => {
 
   return (
     <div>
-      <table class="table-fixed border-collapse border border-slate-400 w-[96%] mx-[2%] overflow-y-hidden">
+      <table className="table-fixed border-collapse border border-slate-400 w-[96%] mx-[2%] overflow-y-hidden">
         <thead className='w-full'>
-          <tr className='capitalize border border-slate-300 flex justify-between items-center  '>
-            <th className='border border-slate-300 '>ID</th>
-            <th className='border border-slate-300 '>Category ID</th>
-            <th className='border border-slate-300 '>Name</th>
-            <th className='border border-slate-300 '>Price</th>
-            <th className='border border-slate-300 '>Description</th>
-            <th className='border border-slate-300 '>Product picture</th>
-            <th className='border border-slate-300 '>Edit</th>
-            <th className='border border-slate-300 '>Delete</th>
+          <tr className='capitalize border border-slate-300 flex justify-center items-center  '>
+            <th>ID</th>
+            <th >Category ID</th>
+            <th >Name</th>
+            <th >Price</th>
+            <th >Description</th>
+            <th >Product picture</th>
+            <th >Edit</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody className='w-full '>
