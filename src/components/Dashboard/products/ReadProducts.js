@@ -22,7 +22,6 @@ const ReadProducts = ({setFetchHelper}) => {
           </tr>
         </thead>
         <tbody>
-
           {products.map((product, i)=>{
             return (<tr key={i}>
           <td>ID</td>
@@ -35,7 +34,6 @@ const ReadProducts = ({setFetchHelper}) => {
           <td><RiDeleteBin6Line /></td>
           </tr>)
           })}
-          
         </tbody>
       </table>
       <button onClick={()=>setFetchHelper({url: 'productts', type: GETALL, dataUpdate:'products', headers:{}})}>new fetch</button>
